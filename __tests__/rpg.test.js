@@ -49,7 +49,7 @@ test('should generate new Avatar with random attributes', () =>{
 //test 5
 test('should generate new npc with random attributes', () =>{
   const game1 = new Game;
-  const zombie1 = game1.npcGenerator(wrong);
+  const zombie1 = game1.npcGenerator(1);
   expect(zombie1.karma).toBeLessThan(4);
   expect(zombie1.karma).toBeGreaterThanOrEqual(1);
   expect(zombie1.physicalA).toBeGreaterThanOrEqual(1);
