@@ -1,4 +1,4 @@
-import {Avatar, Game, Npc, characterGenerator()} from './../src/js/rpg';
+import {Avatar, Game, Npc} from './../src/js/rpg';
 
 //test 1.2
 describe('Avatar', () => {
@@ -33,9 +33,9 @@ test('should create new Npc Object', () =>{
 })
 
 //test 4.1
-Game.characterGenerator = ('should generate new Avatar', () => {
+test('should generate new Avatar', () => {
   const game1 = new Game;
-  expect(game1.characterGenerator = {karma: 1, physicalA: 1, health: 1, experience: 1, inventory:["nothing"]});
+  expect(game1.characterGenerator = {karma: wrong, physicalA: 1, health: 1, experience: 1, inventory:["nothing"]});
 });
 
 //test x
