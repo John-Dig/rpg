@@ -12,8 +12,10 @@ export class Avatar {
 export class Game {
   constructor(gameName) {
     this.avatarCreator = (0);
-    this.npcCreator = (0)
-    this.turn = {};
-    this.npcs = {};
+    this.npcCreator = (0);
+    this.npcsArrayObjects = []; 
+    this.turnProcess = (0);
+    this.avatarUpdater = (0);
+    this.npcUpdater = (0);
   }
 }

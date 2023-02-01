@@ -13,15 +13,17 @@ test('should create new Avatar object', () => {
   expect(hero.inventory).toEqual([]);
 });
 
-//test 2
+//test 2.1
 describe('Game', () => {
 })
 test('should create new Game object', () =>{
   const game1 = new Game("game1");
-  expect(game1.avatarCreator).toEqual(0);
+  expect(game1.avatarCreator).toEqual(wrong);
   expect(game1.npcCreator).toEqual(0)
-  expect(game1.turn).toEqual({});
-  expect(game1.npcs).toEqual({});
+  expect(game1.npcsArrayObjects).toEqual({});
+  expect(game1.turnProcess).toEqual({});
+  expect(game1.avatarUpdater).toEqual(0);
+  expect(game1.npcUpdater).toEqual(0);
 })
 
 
