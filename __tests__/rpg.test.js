@@ -41,7 +41,7 @@ test('should create new Npc Object', () =>{
 //test 4
 test('should add functional method avatarCreator to Game object', () =>{
   const game1 = new Game;
-  expect(game1.avatarCreator("hero")).toEqual({heroName: "hero", karma: 1, physicalA: 1, health: 1, experience: 1, inventory: ["pants", "shirt"]})
+  expect(game1.avatarCreator("hero")).toEqual({heroName: "Wrong", karma: 1, physicalA: 1, health: 1, experience: 1, inventory: ["pants", "shirt"]})
 });
 
 //test x

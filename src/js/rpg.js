@@ -10,18 +10,14 @@ export class Avatar {
 }
 
 export class Game {
-  constructor(gameName) {
-    this.avatarCreator = (0);
-    this.npcCreator = (0);
+  constructor(npcsArrayObjects) {
     this.npcsArrayObjects = []; 
-    this.turnProcess = (0);
-    this.avatarUpdater = (0);
-    this.npcUpdater = (0);
   }
-  // avatarCreator(Name) {
-  //   Name = new Avatar;
-  //   return {heroName: Name, karma: 1, physicalA: 1, health: 1, experience: 1, inventory: ["pants", "shirt"]}
-  // }
+  
+  avatarCreator(avatarName) {
+    avatarName = new Avatar;
+    return {heroName: avatarName, karma: 1, physicalA: 1, health: 1, experience: 1, inventory: ["pants", "shirt"]}
+  }
 }
 export class Npc {
   constructor(npc1) {
