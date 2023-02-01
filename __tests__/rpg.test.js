@@ -20,16 +20,16 @@ test('should create new Game object', () =>{
   expect(game1.npcsArray).toEqual([]);
 })
 
-//test 3.2
+//test 3.4
 describe('Npc', () => {
 })
 test('should create new Npc Object', () =>{
-  const npc1 = new Npc("npc1");
-  expect(npc1.karma).toEqual(0);
-  expect(npc1.physicalA).toEqual(0); 
-  expect(npc1.health).toEqual(0);
-  expect(npc1.experience).toEqual(0);
-  expect(npc1.inventory).toEqual([]);
+  const npc1 = new Npc();
+  expect(npc1.karma).toEqual(undefined);
+  expect(npc1.physicalA).toEqual(undefined); 
+  expect(npc1.health).toEqual(undefined);
+  expect(npc1.experience).toEqual(undefined);
+  expect(npc1.inventory).toEqual(undefined);
 })
 
 //test 4.2
@@ -49,8 +49,8 @@ test('should generate new Avatar with random attributes', () =>{
 //test 5
 test('should generate new npc with random attributes', () =>{
   const game1 = new Game;
-  const zombie1 = game1.npcGenerator();
-  expect(zombie1.karma).toBeLessThan(wrong);
+  const zombie1 = game1.npcGenerator(wrong);
+  expect(zombie1.karma).toBeLessThan(4);
   expect(zombie1.karma).toBeGreaterThanOrEqual(1);
   expect(zombie1.physicalA).toBeGreaterThanOrEqual(1);
   expect(zombie1.physicalA).toBeLessThan(4);
