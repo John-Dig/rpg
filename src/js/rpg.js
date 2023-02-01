@@ -9,15 +9,17 @@ export class Avatar {
 }
 
 export class Game {
-  constructor(npcsArray) {
+  constructor() {
     this.npcsArray = []; 
+    this.avatar = {};
   }
   
-  avatarCreator(avatarName) {
-    avatarName = new Avatar;
-    return {karma: 1, physicalA: 1, health: 1, experience: 1, inventory: ["pants", "shirt"]}
+  characterGenerator = () => {
+    hero1 = new Avatar(1,1,1,1,["nothing"])
+    return hero1;
   }
 }
+
 export class Npc {
   constructor(karma, health, physicalA, experience, inventory) {
     this.karma = (0)
