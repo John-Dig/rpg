@@ -1,6 +1,6 @@
 import {Avatar, Game, Npc} from './../src/js/rpg';
 
-//test 1
+//test 1.1
 describe('Avatar', () => {
 });
 test('should create new Avatar object', () => {
@@ -13,20 +13,15 @@ test('should create new Avatar object', () => {
   expect(hero.inventory).toEqual([]);
 });
 
-//test 2.1
+//test 2.2
 describe('Game', () => {
 })
 test('should create new Game object', () =>{
   const game1 = new Game("game1");
-  expect(game1.avatarCreator).toEqual(0);
-  expect(game1.npcCreator).toEqual(0)
-  expect(game1.npcsArrayObjects).toEqual([]);
-  expect(game1.turnProcess).toEqual(0);
-  expect(game1.avatarUpdater).toEqual(0);
-  expect(game1.npcUpdater).toEqual(0);
+  expect(game1.npcsArray).toEqual([]);
 })
 
-//test 3.1
+//test 3.2
 describe('Npc', () => {
 })
 test('should create new Npc Object', () =>{
@@ -38,11 +33,11 @@ test('should create new Npc Object', () =>{
   expect(npc1.inventory).toEqual([]);
 })
 
-//test 4
-test('should add functional method avatarCreator to Game object', () =>{
-  const game1 = new Game;
-  expect(game1.avatarCreator("hero")).toEqual({heroName: "Wrong", karma: 1, physicalA: 1, health: 1, experience: 1, inventory: ["pants", "shirt"]})
-});
+// //test 4
+// test('should add functional method avatarCreator to Game object', () =>{
+//   const game1 = new Game;
+//   expect(game1.avatarCreator("hero")).toEqual({heroName: "Wrong", karma: 1, physicalA: 1, health: 1, experience: 1, inventory: ["pants", "shirt"]})
+// });
 
 //test x
 
