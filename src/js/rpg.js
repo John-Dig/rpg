@@ -1,4 +1,4 @@
-export default class Avatar {
+export class Avatar {
   constructor(heroName) {
     this.heroName = heroName;
     this.karma = 0;
@@ -9,3 +9,11 @@ export default class Avatar {
   }
 }
 
+export class Game {
+  constructor(gameName) {
+    this.avatarCreator = (0);
+    this.npcCreator = (0)
+    this.turn = {};
+    this.npcs = {};
+  }
+}
