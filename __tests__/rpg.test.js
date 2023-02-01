@@ -42,15 +42,16 @@ test('should create new Npc Object', () =>{
 test('should generate new Avatar with random attributes', () =>{
   const game1 = new Game;
   const hero1 = game1.characterGenerator();
-  expect(hero1[0]).toBeGreaterThanOrEqual(wrong);
-  expect(hero1[0]).toBeLessThan(6);
-  expect(hero1[1]).toBeGreaterThanOrEqual(1);
-  expect(hero1[1]).toBeLessThan(6);
-  expect(hero1[2]).toBeGreaterThanOrEqual(1);
-  expect(hero1[2]).toBeLessThan(6);
-  expect(hero1[3]).toBeGreaterThanOrEqual(1);
-  expect(hero1[3]).toBeLessThan(6);
-  expect(hero1[4]).toEqual("nothing");
+  expect(console.log(hero1.karma).toEqual(8));
+  expect(hero1.karma).toBeLessThan(6);
+  expect(hero1.karma).toBeGreaterThanOrEqual(1);
+  expect(hero1.physicalA).toBeGreaterThanOrEqual(1);
+  expect(hero1.physicalA).toBeLessThan(6);
+  expect(hero1.health).toBeGreaterThanOrEqual(1);
+  expect(hero1.health).toBeLessThan(6);
+  expect(hero1.experience).toBeGreaterThanOrEqual(1);
+  expect(hero1.experience).toBeLessThan(6);
+  expect(hero1.inventory).toEqual("nothing");
 });
 //test x
 
