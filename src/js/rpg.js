@@ -19,3 +19,13 @@ export class Game {
     this.npcUpdater = (0);
   }
 }
+
+export class Npc {
+  constructor(npc1) {
+    this.karma = (0)
+    this.health = (0)
+    this.physicalA = (0)
+    this.inventory = [];
+    this.experience = (0)
+  }
+}
