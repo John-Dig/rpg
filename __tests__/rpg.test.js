@@ -1,11 +1,10 @@
 import {Avatar, Game, Npc} from './../src/js/rpg';
 
-//test 1.1
+//test 1.2
 describe('Avatar', () => {
 });
 test('should create new Avatar object', () => {
-  const hero = new Avatar("hero");
-  expect(hero.heroName).toEqual("hero");
+  const hero = new Avatar();
   expect(hero.karma).toEqual(0);
   expect(hero.physicalA).toEqual(0);
   expect(hero.health).toEqual(0);
@@ -33,11 +32,11 @@ test('should create new Npc Object', () =>{
   expect(npc1.inventory).toEqual([]);
 })
 
-// //test 4
-// test('should add functional method avatarCreator to Game object', () =>{
-//   const game1 = new Game;
-//   expect(game1.avatarCreator("hero")).toEqual({heroName: "Wrong", karma: 1, physicalA: 1, health: 1, experience: 1, inventory: ["pants", "shirt"]})
-// });
+//test 4
+test('should add method avatarCreator to Game object', () =>{
+  const game1 = new Game;
+  expect(game1.avatarCreator("hero")).toEqual({heroName: "Wrong", karma: 1, physicalA: 1, health: 1, experience: 1, inventory: ["pants", "shirt"]})
+});
 
 //test x
 
