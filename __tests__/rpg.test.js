@@ -18,7 +18,7 @@ describe('Game', () => {
 })
 test('should create new Game object', () =>{
   const game1 = new Game("game1");
-  expect(game1.avatarCreator).toEqual(wrong);
+  expect(game1.avatarCreator).toEqual(0);
   expect(game1.npcCreator).toEqual(0)
   expect(game1.turn).toEqual({});
   expect(game1.npcs).toEqual({});
