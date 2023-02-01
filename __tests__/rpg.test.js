@@ -32,12 +32,6 @@ test('should create new Npc Object', () =>{
   expect(npc1.inventory).toEqual([]);
 })
 
-// //test 4.1
-// test('should generate new Avatar', () => {
-//   const game1 = new Game;
-//   expect(game1.characterGenerator = {karma: 1, physicalA: 1, health: 1, experience: 1, inventory:["nothing"]});
-// });
-
 //test 4.2
 test('should generate new Avatar with random attributes', () =>{
   const game1 = new Game;
@@ -50,14 +44,23 @@ test('should generate new Avatar with random attributes', () =>{
   expect(hero1.health).toBeLessThan(6);
   expect(hero1.experience).toBeGreaterThanOrEqual(1);
   expect(hero1.experience).toBeLessThan(6);
-  expect(hero1.inventory).toEqual(["nothing"]);
+  expect(hero1.inventory).toEqual([""]);
 });
-//test x
-
-// test('should generate new hero abilities', () => {
-//   const hero1 = new Avatar("hero1")
-//   expect(hero1.generate)
-// });
+//test 5
+test('should generate new npc with random attributes', () =>{
+  const game1 = new Game;
+  const zombie1 = game1.npcGenerator();
+  expect(zombie1.karma).toBeLessThan(wrong);
+  expect(zombie1.karma).toBeGreaterThanOrEqual(1);
+  expect(zombie1.physicalA).toBeGreaterThanOrEqual(1);
+  expect(zombie1.physicalA).toBeLessThan(4);
+  expect(zombie1.health).toBeGreaterThanOrEqual(1);
+  expect(zombie1.health).toBeLessThan(4);
+  expect(zombie1.experience).toBeGreaterThanOrEqual(1);
+  expect(zombie1.experience).toBeLessThan(4);
+  expect(zombie1.inventory).toEqual([""]);
+  
+})
 
 //test 2
 

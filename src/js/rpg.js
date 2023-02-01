@@ -7,7 +7,6 @@ export class Avatar {
     this.inventory = inventory;
   }
 }
-
 export class Game {
   constructor() {
     this.npcsArray = []; 
@@ -18,8 +17,15 @@ export class Game {
     const roll = () => { 
       return Math.ceil(Math.random() * 5) 
     }
-    const buddy = new Avatar(roll(),roll(),roll(),5,["nothing"]);
+    const buddy = new Avatar(roll(),roll(),roll(),roll(),[""]);
     return buddy;
+  }
+  npcGenerator = () => {
+    const roll = () => { 
+      return Math.ceil(Math.random() * 3) 
+    }
+    const zombie = new Npc(roll(),roll(),roll(),roll(),[""])
+    return zombie;
   }
 }
 export class Npc {
