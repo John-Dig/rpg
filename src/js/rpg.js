@@ -13,13 +13,15 @@ export class Game {
     this.npcsArray = []; 
     this.avatar = {};
   }
-  
+  //2.0
   characterGenerator = () => {
-    hero1 = new Avatar(1,1,1,1,["nothing"])
+    const roll = () => { 
+      return Math.ceil(Math.random() * 5) 
+    }
+    hero1 = new Avatar(roll(),roll(),roll(),roll(),["nothing"]);
     return hero1;
   }
 }
-
 export class Npc {
   constructor(karma, health, physicalA, experience, inventory) {
     this.karma = (0)
