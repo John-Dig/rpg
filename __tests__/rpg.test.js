@@ -1,9 +1,11 @@
 import Avatar from './../src/js/rpg';
 
 //test 1
-test('Avatar()', () => {
+describe('Avatar', () => {
+});
+test('should create new object, hero', () => {
   const hero = new Avatar("hero")
-  expect(hero.heroName).toEqual("heroWrong")
+  expect(hero.heroName).toEqual("hero")
   expect(hero.karma).toEqual(0);
   expect(hero.physicalA).toEqual(0);
   expect(hero.health).toEqual(0);
