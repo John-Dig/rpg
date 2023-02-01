@@ -18,7 +18,7 @@ export class Game {
     const roll = () => { 
       return Math.ceil(Math.random() * 5) 
     }
-    hero1 = new Avatar(roll(),roll(),roll(),roll(),["nothing"]);
+    const hero1 = new Avatar(roll(),roll(),roll(),roll(),["nothing"]);
     return hero1;
   }
 }

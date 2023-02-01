@@ -32,12 +32,27 @@ test('should create new Npc Object', () =>{
   expect(npc1.inventory).toEqual([]);
 })
 
-//test 4.1
-test('should generate new Avatar', () => {
-  const game1 = new Game;
-  expect(game1.characterGenerator = {karma: 1, physicalA: 1, health: 1, experience: 1, inventory:["nothing"]});
-});
+// //test 4.1
+// test('should generate new Avatar', () => {
+//   const game1 = new Game;
+//   expect(game1.characterGenerator = {karma: 1, physicalA: 1, health: 1, experience: 1, inventory:["nothing"]});
+// });
 
+//test 4.2
+test('should generate new Avatar with random attributes', () =>{
+  const game1 = new Game;
+  const hero1 = game1.characterGenerator();
+  //expect(console.log(hero[0].toEqual(8)));
+  expect(hero1[0]).toBeGreaterThanOrEqual(wrong);
+  expect(hero1[0]).toBeLessThan(6);
+  expect(hero1[1]).toBeGreaterThanOrEqual(1);
+  expect(hero1[1]).toBeLessThan(6);
+  expect(hero1[2]).toBeGreaterThanOrEqual(1);
+  expect(hero1[2]).toBeLessThan(6);
+  expect(hero1[3]).toBeGreaterThanOrEqual(1);
+  expect(hero1[3]).toBeLessThan(6);
+  expect(hero1[4]).toEqual("nothing");
+});
 //test x
 
 // test('should generate new hero abilities', () => {
