@@ -26,12 +26,22 @@ test('should create new Game object', () =>{
   expect(game1.npcUpdater).toEqual(0);
 })
 
-
-
-
-
-
 //test 3
+describe('Npc', () => {
+})
+test('should create new Npc Object', () =>{
+  const npc1 = new Npc("npc1");
+  expect(npc1.heroName).toEqual("npc1");
+  expect(npc1.karma).toEqual(0);
+  expect(npc1.physicalA).toEqual(0);
+  expect(npc1.health).toEqual(0);
+  expect(npc1.experience).toEqual(0);
+  expect(npc1.inventory).toEqual([]);
+})
+
+
+
+//test x
 
 // test('should generate new hero abilities', () => {
 //   const hero1 = new Avatar("hero1")
