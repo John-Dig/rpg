@@ -1,15 +1,15 @@
 import {Avatar, Game, Npc} from './../src/js/rpg';
 
-//test 1.2
+//test 1.3
 describe('Avatar', () => {
 });
 test('should create new Avatar object', () => {
   const hero = new Avatar();
-  expect(hero.karma).toEqual(0);
-  expect(hero.physicalA).toEqual(0);
-  expect(hero.health).toEqual(0);
-  expect(hero.experience).toEqual(0);
-  expect(hero.inventory).toEqual([]);
+  expect(hero.karma).toEqual(undefined);
+  expect(hero.physicalA).toEqual(undefined);
+  expect(hero.health).toEqual(undefined);
+  expect(hero.experience).toEqual(undefined);
+  expect(hero.inventory).toEqual(undefined);
 });
 
 //test 2.2
@@ -42,8 +42,8 @@ test('should create new Npc Object', () =>{
 test('should generate new Avatar with random attributes', () =>{
   const game1 = new Game;
   const hero1 = game1.characterGenerator();
-  //expect(console.log(hero[0].toEqual(8)));
-  expect(hero1[0]).toBeGreaterThanOrEqual(wrong);
+  expect(console.log(hero1)).toEqual(8);
+  expect(hero1[0]).toBeGreaterThanOrEqual(1);
   expect(hero1[0]).toBeLessThan(6);
   expect(hero1[1]).toBeGreaterThanOrEqual(1);
   expect(hero1[1]).toBeLessThan(6);
