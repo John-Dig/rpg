@@ -31,7 +31,7 @@ describe('Npc', () => {
 })
 test('should create new Npc Object', () =>{
   const npc1 = new Npc("npc1");
-  expect(npc1.karma).toEqual(wrong);
+  expect(npc1.karma).toEqual(0);
   expect(npc1.physicalA).toEqual(0); 
   expect(npc1.health).toEqual(0);
   expect(npc1.experience).toEqual(0);
