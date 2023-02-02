@@ -75,22 +75,23 @@ describe('adding beforeEach', () => {
   describe('just a checker', () => {
   })
   test('checks that characters are in the game', () =>{
-    console.log(game1.avatar);
-    console.log(game1.npcs);
     expect(game1.avatar).toBeTruthy();
     expect(game1.npcs).toBeTruthy();
   });
   
-  //test 7 turnProcess
-  // test('completes turn, or 1 avatar choice', () => {
-  //   const preTurnAvatar = game1.avatar;
-  //   const preTurnNpcs = game1.npcs;
-  //   game1.turnProcess();
-  //   expect(hero1.turn).toEqual(1);
-  //   expect(game1.avatar).not.toEqual(preTurnAvatar);
-  //   expect(game1.npcs).not.toEqual(preTurnNpcs);
+  //test 7.1 
+  test('completes turn, or 1 avatar choice', () => {
+    const preTurnAvatar = game1.avatar;
+    expect(game1.avatar.turn).toEqual(0);
+    //console.log(game1.npcs);
+    game1.turnProcess();
+    expect(game1.avatar.turn).toEqual(0);
+    // expect(game1.avatar).toStrictEqual(preTurnAvatar);
+    // expect(game1.npcs).toStrictEqual(preTurnNpcs);
+    // console.log(game1.npcs);
+    // console.log(preTurnNpcs);
     
-  // });
+  });
 
 
 }); //closes beforeEach
