@@ -85,7 +85,7 @@ describe('adding beforeEach', () => {
     expect(game1.avatar.turn).toEqual(0);
     //console.log(game1.npcs);
     game1.turnProcess();
-    expect(game1.avatar.turn).toEqual(0);
+    expect(game1.avatar.turn).toEqual(1);
     // expect(game1.avatar).toStrictEqual(preTurnAvatar);
     // expect(game1.npcs).toStrictEqual(preTurnNpcs);
     // console.log(game1.npcs);
