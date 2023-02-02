@@ -85,11 +85,11 @@ describe('adding beforeEach', () => {
     game1.turnProcess();
     expect(game1.avatar.turn).toEqual(1);
   });
-  //test 8.1
-  test('completes full turn, hitting npc for 1 point damage', () => {
+  //test 8.2
+  test('completes full turn, also hitting for 1 or 2, points damage', () => {
     const preHealth = game1.npc.health 
     game1.turnProcess();
-    expect(game1.npc.health === preHealth - 1).toEqual(true);
+    expect(game1.npc.health < preHealth).toEqual(true);
   })
 
 });  //closes beforeEach

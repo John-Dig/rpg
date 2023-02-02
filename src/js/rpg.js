@@ -39,9 +39,21 @@ export class Game {
   turnProcess = () => {
    // add turn to Avatar
     this.avatar.turn ++
-    console.log("attacked the zombie")
-    this.npc.health --
-    return this.avatar.turn , this.npc.health; 
+    // console.log(`turn ${this.avatar.turn} starting`)
+    // console.log(`zombie's health is ${this.npc.health}`)
+    // const hitStrength = Math.ceil(Math.random() * 2)
+    // this.npc.health = this.npc.health - hitStrength;
+    // console.log(`you hit the zombie for ${hitStrength} points of damage`)
+    // console.log(`zombie's health is ${this.npc.health}`)
+    // if (this.npc.health <= 0){
+    //   console.log("zombie is dead");
+    // }
+    // else if (this.npc.health > 0) {
+    //   console.log(`zombie is still moving, ${this.npc.health} health left`);
+    // }
+    // else {console.log("error")};
+    // console.log(`turn ${this.avatar.turn} end`)
+    // return this.avatar.turn , this.npc.health; 
   
   };
 
