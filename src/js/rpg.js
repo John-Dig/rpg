@@ -27,6 +27,10 @@ export class Game {
     const zombie = new Npc(roll(),roll(),roll(),roll(),[""])
     return zombie;
   }
+  //-------------need to change game inputs to undefined, need to finish below
+  characterAdder = () => {
+    this.npcsArray 
+  }
 }
 export class Npc {
   constructor(karma, health, physicalA, experience, inventory) {
