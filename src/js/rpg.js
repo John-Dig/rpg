@@ -18,9 +18,9 @@ export class Npc {
   }
 }
 export class Game {
-  constructor(npcsArray, avatar) {
+  constructor(npcs, avatar) {
     this.avatar = avatar;
-    this.npcsArray = npcsArray; 
+    this.npcs = npcs; 
   }
   characterGenerator = () => {
     const roll = () => { 
@@ -51,6 +51,6 @@ export class Game {
 //   let hero1 = game1.characterGenerator();
 //   let zombie1 = game1.npcGenerator();
 //   game1.avatar = hero1;
-//   game1.npcsArray =zombie1;
+//   game1.npcs =zombie1;
 //   return game1;
 // }
