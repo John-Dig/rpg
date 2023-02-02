@@ -36,7 +36,7 @@ export class Game {
     const zombie = new Npc(roll(),roll(),roll(),roll(),[""])
     return zombie;
   }
-  //-------------need to finish below
+  //-------------probably delete
   startProcess = () => {
     const game1 = new Game;
     let hero1 = game1.characterGenerator();
@@ -45,4 +45,6 @@ export class Game {
     game1.npcsArray =zombie1;
     return game1;
   }
-}
+  turnProcess = () => {
+    
+  }

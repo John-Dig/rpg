@@ -80,10 +80,20 @@ describe('adding beforeEach', () => {
     expect(game1.avatar).toBeDefined;
     expect(game1.npcsArray).toBeDefined;
   });
-}); //closes describe/beforeEach
   
   
   //--------------consider test 6.3
+  
+  //test 7 turnProcess
+  test('completes turn, or 1 avatar choice', () => {
+    const preTurnAvatar = game1.avatar;
+    const preTurnNpcsArray = game1.npcsArray;
+    game1.turnProcess()
+    expect(hero1.turn).toEqual(1);
+    expect(game1.avatar).not.toEqual(preTurnAvatar);
+    expect(game1.npcsArray).not.toEqual(preTurnNpcsArray);
+    
+  });
 
-//test 7 turnProcess
-//test('completes turn, or 1 avatar choice')
+
+}); //closes beforeEach
