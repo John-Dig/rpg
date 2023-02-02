@@ -94,4 +94,4 @@ describe('adding beforeEach', () => {
   });
 
 
-}); //closes beforeEach
+});  //closes beforeEach
