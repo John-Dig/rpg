@@ -45,18 +45,18 @@ describe('adding beforeEach', () => {
     game1.npcs =zombie1;
   });
   
-  //test 4.3
+  //test 4.4
   test('should generate new Avatar with random attributes', () =>{
     //const game1 = new Game;
-    expect(hero1.karma).toBeLessThan(6);
-    expect(hero1.karma).toBeGreaterThanOrEqual(1);
-    expect(hero1.physicalA).toBeGreaterThanOrEqual(1);
-    expect(hero1.physicalA).toBeLessThan(6);
-    expect(hero1.health).toBeGreaterThanOrEqual(1);
-    expect(hero1.health).toBeLessThan(6);
-    expect(hero1.experience).toBeGreaterThanOrEqual(1);
-    expect(hero1.experience).toBeLessThan(6);
-    expect(hero1.inventory).toEqual([""]);
+    expect(game1.avatar.karma).toBeLessThan(6);
+    expect(game1.avatar.karma).toBeGreaterThanOrEqual(1);
+    expect(game1.avatar.physicalA).toBeGreaterThanOrEqual(1);
+    expect(game1.avatar.physicalA).toBeLessThan(6);
+    expect(game1.avatar.health).toBeGreaterThanOrEqual(1);
+    expect(game1.avatar.health).toBeLessThan(6);
+    expect(game1.avatar.experience).toBeGreaterThanOrEqual(1);
+    expect(game1.avatar.experience).toBeLessThan(6);
+    expect(game1.avatar.inventory).toEqual([""]);
   });
   //test 5.1
   test('should generate new npc with random attributes', () =>{
@@ -82,15 +82,15 @@ describe('adding beforeEach', () => {
   });
   
   //test 7 turnProcess
-  test('completes turn, or 1 avatar choice', () => {
-    const preTurnAvatar = game1.avatar;
-    const preTurnNpcs = game1.npcs;
-    game1.turnProcess();
-    expect(hero1.turn).toEqual(0);
-    expect(game1.avatar).toEqual(preTurnAvatar);
-    expect(game1.npcs).toEqual(preTurnNpcs);
+  // test('completes turn, or 1 avatar choice', () => {
+  //   const preTurnAvatar = game1.avatar;
+  //   const preTurnNpcs = game1.npcs;
+  //   game1.turnProcess();
+  //   expect(hero1.turn).toEqual(1);
+  //   expect(game1.avatar).not.toEqual(preTurnAvatar);
+  //   expect(game1.npcs).not.toEqual(preTurnNpcs);
     
-  });
+  // });
 
 
 }); //closes beforeEach

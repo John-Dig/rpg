@@ -36,13 +36,13 @@ export class Game {
     const zombie = new Npc(roll(),roll(),roll(),roll(),[""])
     return zombie;
   }
-  turnProcess = () => {
-    //add turn to Avatar
-    //this.hero1.turn ++
-  //return this.hero1.turn;
+//   turnProcess = () => {
+//     // add turn to Avatar
+//     hero1.turn ++
+//     return this.hero1.turn;
   
-  };
-}
+//   };
+// }
 
 
 // //-------------probably delete
@@ -53,4 +53,4 @@ export class Game {
 //   game1.avatar = hero1;
 //   game1.npcs =zombie1;
 //   return game1;
-// }
+}
