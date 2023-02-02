@@ -56,15 +56,4 @@ export class Game {
     return this.avatar.turn , this.npc.health; 
   
   };
-
-
-
-// //-------------probably delete
-// startProcess = () => {
-//   const game1 = new Game;
-//   let hero1 = game1.characterGenerator();
-//   let zombie1 = game1.npcGenerator();
-//   game1.avatar = hero1;
-//   game1.npc =zombie1;
-//   return game1;
-}
+//starting UI

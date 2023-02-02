@@ -91,5 +91,6 @@ describe('adding beforeEach', () => {
     game1.turnProcess();
     expect(game1.npc.health < preHealth).toEqual(true);
   })
-
 });  //closes beforeEach
+
+//starting UI
