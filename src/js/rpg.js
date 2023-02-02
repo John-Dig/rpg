@@ -46,5 +46,6 @@ export class Game {
     return game1;
   }
   turnProcess = () => {
-    
-  }
+    console.log("wrong");
+  };
+}
