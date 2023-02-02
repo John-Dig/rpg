@@ -32,7 +32,7 @@ test('should create new Npc Object', () =>{
   expect(npc1.experience).toEqual(undefined);
   expect(npc1.inventory).toEqual(undefined);
 })
-//testing all below again............................
+//this is the Startup Process---------
 describe('adding beforeEach', () => {
   let game1 = new Game;
   let hero1;
@@ -73,10 +73,10 @@ describe('adding beforeEach', () => {
     expect(zombie1.inventory).toEqual([""]);
   });
   
-  //test 6.4
-  describe('Game.startProcess', () => {
+  //test 6.5
+  describe('just a checker', () => {
   })
-  test('generates characters and puts them into the game', () =>{
+  test('checks that characters are in the game', () =>{
     expect(game1.avatar).toBeDefined;
     expect(game1.npcsArray).toBeDefined;
   });
