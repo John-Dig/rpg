@@ -8,9 +8,9 @@ export class Avatar {
   }
 }
 export class Game {
-  constructor() {
-    this.npcsArray = []; 
-    this.avatar = {};
+  constructor(npcsArray, avatar) {
+    this.npcsArray = npcsArray; 
+    this.avatar = avatar;
   }
   //2.0
   characterGenerator = () => {

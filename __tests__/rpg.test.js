@@ -12,12 +12,13 @@ test('should create new Avatar object', () => {
   expect(hero.inventory).toEqual(undefined);
 });
 
-//test 2.2
+//test 2.3
 describe('Game', () => {
 })
 test('should create new Game object', () =>{
-  const game1 = new Game("game1");
-  expect(game1.npcsArray).toEqual([]);
+  const game1 = new Game();
+  expect(game1.npcsArray).toEqual(undefined);
+  expect(game1.avatar).toEqual(undefined);
 })
 
 //test 3.4
