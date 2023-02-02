@@ -67,7 +67,7 @@ describe('Game.startProcess', () => {
 })
 test('generates characters and puts them into the game', () =>{
 const game1 = new Game; 
-game1.startProcess(wrong);
+game1.startProcess();
 expect(game1.npcsArray).toBeDefined;
 expect(game1.avatar).toBeDefined;
 });

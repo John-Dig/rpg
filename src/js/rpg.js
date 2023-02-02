@@ -38,11 +38,11 @@ export class Game {
   }
   //-------------need to finish below
   startProcess = () => {
-    game1 = new Game;
-    hero1 = new Avatar;
-    zombie1 = new Npc;
+    const game1 = new Game;
+    let hero1 = game1.characterGenerator();
+    let zombie1 = game1.npcGenerator();
     game1.avatar = hero1;
-    game1.npcsArray.push(zombie1);
+    game1.npcsArray =zombie1;
     return game1;
   }
 }
