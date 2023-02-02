@@ -18,8 +18,8 @@ export class Npc {
 }
 export class Game {
   constructor(npcsArray, avatar) {
-    this.npcsArray = npcsArray; 
     this.avatar = avatar;
+    this.npcsArray = npcsArray; 
   }
   //2.0
   characterGenerator = () => {
@@ -41,7 +41,8 @@ export class Game {
     game1 = new Game;
     hero1 = new Avatar;
     zombie1 = new Npc;
-    
-    this.npcsArray 
+    game1.avatar = hero1;
+    game1.npcsArray.push(zombie1);
+    return game1;
   }
 }

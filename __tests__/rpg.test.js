@@ -62,10 +62,12 @@ test('should generate new npc with random attributes', () =>{
   expect(zombie1.inventory).toEqual([""]);
 });
 
-//test 6 startProcess
+//test 6.1
 describe('Game.startProcess', () => {
 })
 test('generates characters and puts them into the game', () =>{
+const game1 = new Game; 
+game1.startProcess(wrong);
 expect(game1.npcsArray).toBeDefined;
 expect(game1.avatar).toBeDefined;
 });
