@@ -35,14 +35,20 @@ test('should create new Npc Object', () =>{
 //testing all below again............................
 describe('adding beforeEach', () => {
   let game1 = new Game;
+  let hero1;
+  let zombie1;
   beforeEach(() => {
+    //this creates game, hero, 1 zombie, and puts them into the game.
     const game1 = new Game;
+    hero1 = game1.characterGenerator();
+    zombie1 = game1.npcGenerator();
+    game1.avatar = hero1;
+    game1.npcsArray =zombie1;
   });
   
-  //test 4.2
+  //test 4.3
   test('should generate new Avatar with random attributes', () =>{
     //const game1 = new Game;
-    const hero1 = game1.characterGenerator();
     expect(hero1.karma).toBeLessThan(6);
     expect(hero1.karma).toBeGreaterThanOrEqual(1);
     expect(hero1.physicalA).toBeGreaterThanOrEqual(1);
@@ -53,10 +59,9 @@ describe('adding beforeEach', () => {
     expect(hero1.experience).toBeLessThan(6);
     expect(hero1.inventory).toEqual([""]);
   });
-  //test 5
+  //test 5.1
   test('should generate new npc with random attributes', () =>{
-    //const game1 = new Game;
-    const zombie1 = game1.npcGenerator();
+    
     expect(zombie1.karma).toBeLessThan(4);
     expect(zombie1.karma).toBeGreaterThanOrEqual(1);
     expect(zombie1.physicalA).toBeGreaterThanOrEqual(1);
@@ -68,15 +73,10 @@ describe('adding beforeEach', () => {
     expect(zombie1.inventory).toEqual([""]);
   });
   
-  //test 6.3 wacky test
+  //test 6.4
   describe('Game.startProcess', () => {
   })
   test('generates characters and puts them into the game', () =>{
-    //const game1 = new Game;
-    let hero1 = game1.characterGenerator();
-    let zombie1 = game1.npcGenerator();
-    game1.avatar = hero1;
-    game1.npcsArray =zombie1;
     expect(game1.avatar).toBeDefined;
     expect(game1.npcsArray).toBeDefined;
   });
