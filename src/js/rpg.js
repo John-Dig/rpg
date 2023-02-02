@@ -18,9 +18,9 @@ export class Npc {
   }
 }
 export class Game {
-  constructor(npcs, avatar) {
+  constructor(npc, avatar) {
     this.avatar = avatar;
-    this.npcs = npcs; 
+    this.npc = npc; 
   }
   characterGenerator = () => {
     const roll = () => { 
@@ -40,7 +40,7 @@ export class Game {
     // add turn to Avatar
     this.avatar.turn ++
     this.avatar.health = this.avatar.health + 1
-    this.npcs.health = this.npcs.health +1
+    this.npc.health = this.npc.health +1
     return this.avatar.turn;
   
   };
@@ -53,6 +53,6 @@ export class Game {
 //   let hero1 = game1.characterGenerator();
 //   let zombie1 = game1.npcGenerator();
 //   game1.avatar = hero1;
-//   game1.npcs =zombie1;
+//   game1.npc =zombie1;
 //   return game1;
 }

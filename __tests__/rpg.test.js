@@ -17,7 +17,7 @@ describe('Game', () => {
 })
 test('should create new Game object', () =>{
   const game1 = new Game();
-  expect(game1.npcs).toEqual(undefined);
+  expect(game1.npc).toEqual(undefined);
   expect(game1.avatar).toEqual(undefined);
 })
 
@@ -42,7 +42,7 @@ describe('adding beforeEach', () => {
     hero1 = game1.characterGenerator();
     zombie1 = game1.npcGenerator();
     game1.avatar = hero1;
-    game1.npcs =zombie1;
+    game1.npc =zombie1;
   });
   
   //test 4.4
@@ -60,15 +60,15 @@ describe('adding beforeEach', () => {
   });
   //test 5.1
   test('should generate new npc with random attributes', () =>{
-    expect(game1.npcs.karma).toBeLessThan(4);
-    expect(game1.npcs.karma).toBeGreaterThanOrEqual(1);
-    expect(game1.npcs.physicalA).toBeGreaterThanOrEqual(1);
-    expect(game1.npcs.physicalA).toBeLessThan(4);
-    expect(game1.npcs.health).toBeGreaterThanOrEqual(1);
-    expect(game1.npcs.health).toBeLessThan(4);
-    expect(game1.npcs.experience).toBeGreaterThanOrEqual(1);
-    expect(game1.npcs.experience).toBeLessThan(4);
-    expect(game1.npcs.inventory).toEqual([""]);
+    expect(game1.npc.karma).toBeLessThan(4);
+    expect(game1.npc.karma).toBeGreaterThanOrEqual(1);
+    expect(game1.npc.physicalA).toBeGreaterThanOrEqual(1);
+    expect(game1.npc.physicalA).toBeLessThan(4);
+    expect(game1.npc.health).toBeGreaterThanOrEqual(1);
+    expect(game1.npc.health).toBeLessThan(4);
+    expect(game1.npc.experience).toBeGreaterThanOrEqual(1);
+    expect(game1.npc.experience).toBeLessThan(4);
+    expect(game1.npc.inventory).toEqual([""]);
   });
   
   //test 6.6
@@ -76,7 +76,7 @@ describe('adding beforeEach', () => {
   })
   test('checks that characters are in the game', () =>{
     expect(game1.avatar).toBeTruthy();
-    expect(game1.npcs).toBeTruthy();
+    expect(game1.npc).toBeTruthy();
   });
   
   //test 7.2
@@ -87,7 +87,8 @@ describe('adding beforeEach', () => {
   });
   //test 8
   test('completes full turn', () => {
-
+    
+    game1.turnProcess();
   })
 
 });  //closes beforeEach
