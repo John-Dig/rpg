@@ -62,12 +62,16 @@ test('should generate new npc with random attributes', () =>{
   expect(zombie1.inventory).toEqual([""]);
 });
 
-//test 6
-test('should add Avatar and npc to Game object', () =>{
-const game1 = new Game;
-const hero1 = new Avatar;
-const zombie1 = game1.npcGenerator;
-expect(console.log(game1.avatar)).toEqual(wrong);
+//test 6 startProcess
+describe('Game.startProcess', () => {
+})
+test('generates characters and puts them into the game', () =>{
 expect(game1.npcsArray).toBeDefined;
 expect(game1.avatar).toBeDefined;
 });
+
+
+//--------------
+
+//test 7 turnProcess
+//test('completes turn, or 1 avatar choice')

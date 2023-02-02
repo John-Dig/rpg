@@ -7,6 +7,15 @@ export class Avatar {
     this.inventory = inventory;
   }
 }
+export class Npc {
+  constructor(karma, health, physicalA, experience, inventory) {
+    this.karma = karma
+    this.physicalA = physicalA
+    this.health = health
+    this.experience = experience
+    this.inventory = inventory
+  }
+}
 export class Game {
   constructor(npcsArray, avatar) {
     this.npcsArray = npcsArray; 
@@ -28,16 +37,11 @@ export class Game {
     return zombie;
   }
   //-------------need to finish below
-  characterAdder = () => {
+  startProcess = () => {
+    game1 = new Game;
+    hero1 = new Avatar;
+    zombie1 = new Npc;
+    
     this.npcsArray 
-  }
-}
-export class Npc {
-  constructor(karma, health, physicalA, experience, inventory) {
-    this.karma = karma
-    this.physicalA = physicalA
-    this.health = health
-    this.experience = experience
-    this.inventory = inventory
   }
 }
