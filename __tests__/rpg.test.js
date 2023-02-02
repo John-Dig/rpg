@@ -71,14 +71,14 @@ describe('adding beforeEach', () => {
     expect(game1.npcsArray.inventory).toEqual([""]);
   });
   
-  //test 6.5
+  //test 6.6
   describe('just a checker', () => {
   })
   test('checks that characters are in the game', () =>{
     console.log(game1.avatar);
     console.log(game1.npcsArray);
-    expect(game1.avatar).toBeDefined;
-    expect(game1.npcsArray).toBeDefined;
+    expect(game1.avatar).toBeTruthy();
+    expect(game1.npcsArray).toBeTruthy();
   });
   
   
