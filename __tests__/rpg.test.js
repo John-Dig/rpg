@@ -79,19 +79,15 @@ describe('adding beforeEach', () => {
     expect(game1.npcs).toBeTruthy();
   });
   
-  //test 7.1 
-  test('completes turn, or 1 avatar choice', () => {
-    const preTurnAvatar = game1.avatar;
+  //test 7.2
+  test('completes turn', () => {
     expect(game1.avatar.turn).toEqual(0);
-    //console.log(game1.npcs);
     game1.turnProcess();
     expect(game1.avatar.turn).toEqual(1);
-    // expect(game1.avatar).toStrictEqual(preTurnAvatar);
-    // expect(game1.npcs).toStrictEqual(preTurnNpcs);
-    // console.log(game1.npcs);
-    // console.log(preTurnNpcs);
-    
   });
+  //test 8
+  test('completes full turn', () => {
 
+  })
 
 });  //closes beforeEach
