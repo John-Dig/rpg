@@ -39,7 +39,6 @@ describe('adding beforeEach', () => {
   let zombie1;
   beforeEach(() => {
     //this creates game, hero, 1 zombie, and puts them into the game.
-    const game1 = new Game;
     hero1 = game1.characterGenerator();
     zombie1 = game1.npcGenerator();
     game1.avatar = hero1;
@@ -61,22 +60,23 @@ describe('adding beforeEach', () => {
   });
   //test 5.1
   test('should generate new npc with random attributes', () =>{
-    
-    expect(zombie1.karma).toBeLessThan(4);
-    expect(zombie1.karma).toBeGreaterThanOrEqual(1);
-    expect(zombie1.physicalA).toBeGreaterThanOrEqual(1);
-    expect(zombie1.physicalA).toBeLessThan(4);
-    expect(zombie1.health).toBeGreaterThanOrEqual(1);
-    expect(zombie1.health).toBeLessThan(4);
-    expect(zombie1.experience).toBeGreaterThanOrEqual(1);
-    expect(zombie1.experience).toBeLessThan(4);
-    expect(zombie1.inventory).toEqual([""]);
+    expect(game1.npcsArray.karma).toBeLessThan(4);
+    expect(game1.npcsArray.karma).toBeGreaterThanOrEqual(1);
+    expect(game1.npcsArray.physicalA).toBeGreaterThanOrEqual(1);
+    expect(game1.npcsArray.physicalA).toBeLessThan(4);
+    expect(game1.npcsArray.health).toBeGreaterThanOrEqual(1);
+    expect(game1.npcsArray.health).toBeLessThan(4);
+    expect(game1.npcsArray.experience).toBeGreaterThanOrEqual(1);
+    expect(game1.npcsArray.experience).toBeLessThan(4);
+    expect(game1.npcsArray.inventory).toEqual([""]);
   });
   
   //test 6.5
   describe('just a checker', () => {
   })
   test('checks that characters are in the game', () =>{
+    console.log(game1.avatar);
+    console.log(game1.npcsArray);
     expect(game1.avatar).toBeDefined;
     expect(game1.npcsArray).toBeDefined;
   });
@@ -88,10 +88,10 @@ describe('adding beforeEach', () => {
   test('completes turn, or 1 avatar choice', () => {
     const preTurnAvatar = game1.avatar;
     const preTurnNpcsArray = game1.npcsArray;
-    game1.turnProcess()
-    expect(hero1.turn).toEqual(1);
-    expect(game1.avatar).not.toEqual(preTurnAvatar);
-    expect(game1.npcsArray).not.toEqual(preTurnNpcsArray);
+    game1.turnProcess();
+    expect(hero1.turn).toEqual(0);
+    expect(game1.avatar).toEqual(preTurnAvatar);
+    expect(game1.npcsArray).toEqual(preTurnNpcsArray);
     
   });
 

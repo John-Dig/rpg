@@ -5,6 +5,7 @@ export class Avatar {
     this.health = health;
     this.experience = experience;
     this.inventory = inventory;
+    this.turn = 0; //not needed as argument
   }
 }
 export class Npc {
@@ -21,7 +22,6 @@ export class Game {
     this.avatar = avatar;
     this.npcsArray = npcsArray; 
   }
-  //2.0
   characterGenerator = () => {
     const roll = () => { 
       return Math.ceil(Math.random() * 5) 
@@ -36,16 +36,21 @@ export class Game {
     const zombie = new Npc(roll(),roll(),roll(),roll(),[""])
     return zombie;
   }
-  //-------------probably delete
-  startProcess = () => {
-    const game1 = new Game;
-    let hero1 = game1.characterGenerator();
-    let zombie1 = game1.npcGenerator();
-    game1.avatar = hero1;
-    game1.npcsArray =zombie1;
-    return game1;
-  }
   turnProcess = () => {
-    console.log("wrong");
+    //add turn to Avatar
+    //this.hero1.turn ++
+  //return this.hero1.turn;
+  
   };
 }
+
+
+// //-------------probably delete
+// startProcess = () => {
+//   const game1 = new Game;
+//   let hero1 = game1.characterGenerator();
+//   let zombie1 = game1.npcGenerator();
+//   game1.avatar = hero1;
+//   game1.npcsArray =zombie1;
+//   return game1;
+// }
