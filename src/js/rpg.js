@@ -37,11 +37,11 @@ export class Game {
     return zombie;
   }
   turnProcess = () => {
-    // add turn to Avatar
+   // add turn to Avatar
     this.avatar.turn ++
-    this.avatar.health = this.avatar.health + 1
-    this.npc.health = this.npc.health +1
-    return this.avatar.turn;
+    // console.log("attacked the zombie")
+    // this.npc.health --
+    return this.avatar.turn , this.npc.health; 
   
   };
 
