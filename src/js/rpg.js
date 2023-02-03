@@ -36,7 +36,7 @@ export class Game {
     const zombie = new Npc(roll(),roll(),roll(),roll(),[""])
     return zombie;
   }
-  turnProcess = () => {
+  turnProcess = (answer) => {
    // add turn to Avatar
     this.avatar.turn ++
     console.log(`turn ${this.avatar.turn} starting`)
@@ -56,4 +56,8 @@ export class Game {
     return this.avatar.turn , this.npc.health; 
   
   };
-//starting UI
+}
+//   //handle submission
+// export function handleSubmit()  {
+
+// }

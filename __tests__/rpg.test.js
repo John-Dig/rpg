@@ -1,4 +1,4 @@
-import {Avatar, Game, Npc} from './../src/js/rpg';
+import {Avatar, Game, Npc} from './src/js/rpg';
 
 //test 1.3
 describe('Avatar', () => {
