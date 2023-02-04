@@ -1,4 +1,4 @@
-import {Avatar, Game, Npc} from './src/js/rpg';
+import {Avatar, Game, Npc} from './../src/js/rpg';
 
 //test 1.3
 describe('Avatar', () => {
@@ -85,12 +85,18 @@ describe('adding beforeEach', () => {
     game1.turnProcess();
     expect(game1.avatar.turn).toEqual(1);
   });
-  //test 8.2
-  test('completes full turn, also hitting for 1 or 2, points damage', () => {
+  //test 8.3
+  test('8.3, might get rid of. completes full turn, also hitting for 1 or 2, points damage', () => {
     const preHealth = game1.npc.health 
     game1.turnProcess();
     expect(game1.npc.health < preHealth).toEqual(true);
   })
+  test('test 9: new format: complete turn', () => {
+
+  })
+
+
+
 });  //closes beforeEach
 
 //starting UI

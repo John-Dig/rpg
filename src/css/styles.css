@@ -1,6 +1,12 @@
 body {
   background-color:cadetblue
 };
+#character-status-board{
+  width:500px;
+  border-style: dashed;
+  background-color:antiquewhite;
+
+}
 #avatar {
   width:300px;
   background-color:peru;
@@ -10,4 +16,24 @@ body {
   width:300px;
   background-color:black;
   color:crimson;
+}
+#output-area{
+  font-family:fantasy;
+  font-size: 1.25rem;
+  width: 700px;
+  height: 8rem;
+  padding: 1rem;
+  border-style:solid;
+  border-width:10px;
+  border-color: saddlebrown;
+  background-color: burlywood;
+}
+#form {
+}
+#prompt {
+  height: 2rem;
+  width: 400px;
+  background-color:black;
+  color:ghostwhite;
+
 }
